@@ -41,67 +41,116 @@ export default function PlacementAnalyticsPage() {
         </Link>
       </div>
 
-      {/* Before vs After Modernization Impact Banner */}
-      <div className="glass-card p-6 border-blue-500/40 relative overflow-hidden bg-gradient-to-r from-blue-950/40 via-indigo-950/40 to-slate-950/60">
-        <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+      {/* Before vs After Impact Simulator (Requirement #14) */}
+      <div className="glass-card p-6 border-blue-500/40 relative overflow-hidden bg-gradient-to-r from-blue-950/40 via-indigo-950/40 to-slate-950/60 space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
           <div className="flex items-center gap-2">
-            <span className="text-lg">📈</span>
-            <h2 className="text-base font-bold text-white">
-              State Modernization Impact Telemetry (Before vs. After AI Alignment)
-            </h2>
+            <span className="text-xl">⚡</span>
+            <div>
+              <h2 className="text-lg font-black text-white">
+                Before ➔ After Policy Impact Simulator
+              </h2>
+              <p className="text-xs text-slate-400">
+                Macro-level state vocational health transformation through targeted course modernization and seat rebalancing.
+              </p>
+            </div>
           </div>
-          <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded">
-            Verified Outcome Cycle
+          <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1 rounded-lg self-start sm:self-auto">
+            Projected / Simulated Outcomes
           </span>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 text-center">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
-              Curriculum Alignment
-            </span>
-            <p className="text-2xl font-black text-blue-400 mt-1">
-              58% ➔ <span className="text-emerald-400 font-mono">87%</span>
-            </p>
-            <span className="text-[11px] text-emerald-400 font-mono font-bold block mt-0.5">
-              +29 pts Improvement
-            </span>
+        {/* 3-Stage Transformation Flow */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+          {/* Col 1: Current State (4 cols) */}
+          <div className="lg:col-span-4 bg-slate-950/90 p-4 rounded-xl border border-rose-900/40 space-y-3">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span className="text-xs font-bold text-rose-300 uppercase tracking-wider">
+                1. Current Baseline State
+              </span>
+              <span className="text-[10px] font-mono text-slate-500">Unreformed</span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">Skill Alignment</span>
+                <p className="text-lg font-black font-mono text-rose-400 mt-0.5">58%</p>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">Placement Rate</span>
+                <p className="text-lg font-black font-mono text-amber-400 mt-0.5">67%</p>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">Employer Satisfaction</span>
+                <p className="text-lg font-black font-mono text-amber-400 mt-0.5">64%</p>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">State Skill Gap</span>
+                <p className="text-lg font-black font-mono text-rose-400 mt-0.5">42%</p>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 text-center">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
-              Average Placement Rate
-            </span>
-            <p className="text-2xl font-black text-blue-400 mt-1">
-              64% ➔ <span className="text-emerald-400 font-mono">79%</span>
-            </p>
-            <span className="text-[11px] text-emerald-400 font-mono font-bold block mt-0.5">
-              +15.0% Hiring Surge
-            </span>
+          {/* Col 2: SkillBridge Recommended Interventions (4 cols) */}
+          <div className="lg:col-span-4 bg-blue-950/40 p-4 rounded-xl border border-blue-600/40 space-y-2.5 text-xs">
+            <div className="flex items-center justify-between border-b border-blue-800/60 pb-2">
+              <span className="text-xs font-bold text-blue-300 uppercase tracking-wider">
+                2. Mandated Interventions
+              </span>
+              <span className="text-[10px] font-mono text-blue-400">AI Blueprint</span>
+            </div>
+
+            <ul className="space-y-1.5 text-slate-200">
+              <li className="flex items-center gap-2">
+                <span className="text-blue-400 font-bold">✓</span>
+                <span>Modernize <strong>8 vocational curricula</strong></span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-blue-400 font-bold">✓</span>
+                <span>Launch <strong>3 emerging technology tracks</strong></span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-blue-400 font-bold">✓</span>
+                <span>Upskill <strong>27 certified trainers</strong></span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-blue-400 font-bold">✓</span>
+                <span>Upgrade <strong>14 virtual sandbox labs</strong></span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-blue-400 font-bold">✓</span>
+                <span>Reallocate <strong>650 oversupplied seats</strong></span>
+              </li>
+            </ul>
           </div>
 
-          <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 text-center">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
-              Employer Satisfaction
-            </span>
-            <p className="text-2xl font-black text-blue-400 mt-1">
-              67% ➔ <span className="text-emerald-400 font-mono">82%</span>
-            </p>
-            <span className="text-[11px] text-emerald-400 font-mono font-bold block mt-0.5">
-              +15.0% Recruiter Approval
-            </span>
-          </div>
+          {/* Col 3: Projected Scenario (4 cols) */}
+          <div className="lg:col-span-4 bg-emerald-950/30 p-4 rounded-xl border border-emerald-500/40 space-y-3">
+            <div className="flex items-center justify-between border-b border-emerald-900/60 pb-2">
+              <span className="text-xs font-bold text-emerald-300 uppercase tracking-wider">
+                3. Projected Scenario
+              </span>
+              <span className="text-[10px] font-mono text-emerald-400">Simulated Target</span>
+            </div>
 
-          <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 text-center">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
-              Average Starting Package
-            </span>
-            <p className="text-2xl font-black text-blue-400 mt-1">
-              ₹4.8L ➔ <span className="text-emerald-400 font-mono">₹7.2 LPA</span>
-            </p>
-            <span className="text-[11px] text-emerald-400 font-mono font-bold block mt-0.5">
-              +50.0% Wage Premium
-            </span>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">Skill Alignment</span>
+                <p className="text-lg font-black font-mono text-emerald-400 mt-0.5">87%</p>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">Placement Rate</span>
+                <p className="text-lg font-black font-mono text-emerald-400 mt-0.5">79%</p>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">Employer Satisfaction</span>
+                <p className="text-lg font-black font-mono text-emerald-400 mt-0.5">82%</p>
+              </div>
+              <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span className="text-[10px] text-slate-400">State Skill Gap</span>
+                <p className="text-lg font-black font-mono text-emerald-400 mt-0.5">19%</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

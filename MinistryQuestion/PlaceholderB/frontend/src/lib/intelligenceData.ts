@@ -157,12 +157,12 @@ export interface DataSourceItem {
 export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
   {
     id: 1,
-    skill: "Generative AI & LLMs",
+    skill: "Generative AI",
     sector: "AI & Data Engineering",
     demandScore: 92,
     supplyScore: 38,
     gap: 54,
-    growthRate: "+42% YoY",
+    growthRate: "+42%",
     growthNum: 42,
     openings: 1250,
     avgSalary: "₹8.5 LPA",
@@ -173,37 +173,57 @@ export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
     mappedCourses: ["Applied Generative AI & Deep Learning", "AI & Data Engineering Foundations"],
     targetRoles: ["GenAI Developer", "AI Research Assistant", "Prompt Architect", "RAG Systems Engineer"],
     keyMissingSubskills: ["LangChain", "Vector Embeddings", "RAG Pipelines", "Model Fine-Tuning", "AI Agents"],
-    evidenceText: "1,250 verified job postings across Pune and Mumbai tech hubs require LLM integration, while existing state course syllabi lack hands-on vector database modules."
+    evidenceText: "1,250 verified job postings across tech hubs require LLM integration, while existing course syllabi lack hands-on vector database modules."
   },
   {
     id: 2,
-    skill: "Cloud Computing & DevOps",
+    skill: "Kubernetes",
     sector: "IT & Cloud Infrastructure",
     demandScore: 87,
-    supplyScore: 51,
-    gap: 36,
-    growthRate: "+34% YoY",
-    growthNum: 34,
+    supplyScore: 41,
+    gap: 46,
+    growthRate: "+35%",
+    growthNum: 35,
     openings: 980,
     avgSalary: "₹7.8 LPA",
     salaryNum: 7.8,
     districtDemand: ["Pune", "Nagpur", "Mumbai Metropolitan"],
     requiredProficiency: "Intermediate",
-    priority: "HIGH",
+    priority: "CRITICAL",
     mappedCourses: ["Cloud Infrastructure & DevOps (AWS/Azure)", "DevOps & Site Reliability Engineering"],
     targetRoles: ["Cloud Solutions Architect", "DevOps Engineer", "Cloud Security Admin"],
-    keyMissingSubskills: ["Kubernetes Cluster Ops", "Terraform IaC", "GitHub Actions CI/CD", "AWS Serverless"],
-    evidenceText: "71% of regional cloud job postings specify Kubernetes orchestration and Terraform, yet traditional curricula only cover fundamental virtual machine provisioning."
+    keyMissingSubskills: ["Kubernetes Cluster Ops", "Container Networking", "Helm Charts", "Pod Autoscaling"],
+    evidenceText: "87% of regional cloud job postings specify Kubernetes orchestration, yet traditional vocational curricula only cover basic virtual machines."
   },
   {
     id: 3,
-    skill: "Cybersecurity SOC & Threat Analysis",
+    skill: "Cloud Computing",
+    sector: "IT & Cloud Infrastructure",
+    demandScore: 84,
+    supplyScore: 55,
+    gap: 29,
+    growthRate: "+31%",
+    growthNum: 31,
+    openings: 890,
+    avgSalary: "₹7.5 LPA",
+    salaryNum: 7.5,
+    districtDemand: ["Pune", "Mumbai Metropolitan", "Nagpur"],
+    requiredProficiency: "Intermediate",
+    priority: "HIGH",
+    mappedCourses: ["Cloud Infrastructure & DevOps (AWS/Azure)"],
+    targetRoles: ["Cloud Solutions Architect", "Cloud Admin", "Systems Engineer"],
+    keyMissingSubskills: ["AWS/Azure Architecture", "VPC Peering", "Serverless Functions", "Terraform IaC"],
+    evidenceText: "Strong sustained demand across enterprise clusters for multi-cloud provisioning and infrastructure-as-code automation."
+  },
+  {
+    id: 4,
+    skill: "Cybersecurity",
     sector: "Cybersecurity & Compliance",
     demandScore: 81,
-    supplyScore: 48,
-    gap: 33,
-    growthRate: "+29% YoY",
-    growthNum: 29,
+    supplyScore: 52,
+    gap: 29,
+    growthRate: "+28%",
+    growthNum: 28,
     openings: 720,
     avgSalary: "₹7.2 LPA",
     salaryNum: 7.2,
@@ -213,16 +233,16 @@ export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
     mappedCourses: ["Cybersecurity & SOC Operations"],
     targetRoles: ["SOC Analyst", "Security Incident Responder", "Penetration Tester", "Cloud Security Auditor"],
     keyMissingSubskills: ["SIEM (Splunk/ELK)", "Cloud Threat Hunting", "Zero Trust Architecture", "MITRE ATT&CK"],
-    evidenceText: "BFSI employers in Mumbai and Pune report a 33-point talent shortage in certified security analysts with live incident response sandbox experience."
+    evidenceText: "Financial and enterprise employers report a 29-point talent shortage in certified security analysts with live SOC sandbox experience."
   },
   {
-    id: 4,
+    id: 5,
     skill: "Full-Stack TypeScript & Next.js",
     sector: "Software Development",
     demandScore: 88,
     supplyScore: 45,
     gap: 43,
-    growthRate: "+26% YoY",
+    growthRate: "+26%",
     growthNum: 26,
     openings: 840,
     avgSalary: "₹6.8 LPA",
@@ -236,13 +256,13 @@ export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
     evidenceText: "Software recruitment pipelines indicate modern enterprise teams have phased out PHP/jQuery in favor of Next.js and TypeScript."
   },
   {
-    id: 5,
+    id: 6,
     skill: "Industrial IoT & PLC Automation",
     sector: "Automotive & Manufacturing",
     demandScore: 84,
     supplyScore: 42,
     gap: 42,
-    growthRate: "+31% YoY",
+    growthRate: "+31%",
     growthNum: 31,
     openings: 610,
     avgSalary: "₹6.2 LPA",
@@ -256,13 +276,13 @@ export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
     evidenceText: "Automotive and engineering clusters in Pune-Chakan and Nashik require smart factory technician skills that are missing in conventional mechanical trades."
   },
   {
-    id: 6,
+    id: 7,
     skill: "Data Engineering & Stream Pipelines",
     sector: "AI & Data Engineering",
     demandScore: 78,
     supplyScore: 44,
     gap: 34,
-    growthRate: "+22% YoY",
+    growthRate: "+22%",
     growthNum: 22,
     openings: 490,
     avgSalary: "₹7.5 LPA",
@@ -276,13 +296,13 @@ export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
     evidenceText: "Enterprise data teams have shifted from batch SQL querying to real-time distributed streaming frameworks."
   },
   {
-    id: 7,
+    id: 8,
     skill: "Cross-Platform Mobile (Flutter/RN)",
     sector: "Software Development",
     demandScore: 70,
     supplyScore: 52,
     gap: 18,
-    growthRate: "+15% YoY",
+    growthRate: "+15%",
     growthNum: 15,
     openings: 320,
     avgSalary: "₹5.8 LPA",
@@ -296,13 +316,13 @@ export const SKILL_INTELLIGENCE_DATA: SkillItem[] = [
     evidenceText: "App publisher demand is steady with moderate supply capacity across regional polytechnics."
   },
   {
-    id: 8,
+    id: 9,
     skill: "Basic Office Tools & Data Entry",
     sector: "General Computing",
     demandScore: 31,
     supplyScore: 82,
     gap: -51,
-    growthRate: "-8% YoY",
+    growthRate: "-8%",
     growthNum: -8,
     openings: 210,
     avgSalary: "₹3.1 LPA",
@@ -1656,6 +1676,30 @@ export const DATA_SOURCES_LIST: DataSourceItem[] = [
   }
 ];
 
-// Prototype Disclaimer constant for consistency
+// Prototype Disclaimer constant for consistency (Requirement #23)
 export const PROTOTYPE_DISCLAIMER_TEXT =
-  "SkillBridge AI is a prototype decision-support platform developed for SIH. Demonstration datasets and projected outcomes are simulated for evaluation purposes.";
+  "SkillBridge AI is an SIH 2026 prototype decision-support platform. Demonstration datasets and projected outcomes are simulated for evaluation purposes unless otherwise indicated.";
+
+// Before -> After Impact Simulator Dataset (Requirement #14)
+export const BEFORE_AFTER_IMPACT_DATA = {
+  currentState: {
+    skillAlignment: "58%",
+    placementRate: "67%",
+    employerSatisfaction: "64%",
+    skillGap: "42%"
+  },
+  skillBridgeRecommendations: {
+    modernizeCoursesCount: 8,
+    launchEmergingCoursesCount: 3,
+    upskillTrainersCount: 27,
+    upgradeLabsCount: 14,
+    reallocateSeatsCount: 650
+  },
+  projectedScenario: {
+    skillAlignment: "87%",
+    placementRate: "79%",
+    employerSatisfaction: "82%",
+    skillGap: "19%"
+  }
+};
+
