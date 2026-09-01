@@ -1,14 +1,11 @@
 import { NextResponse } from "next/server";
-import { getLiveDataset, DATA_TTL_SECONDS } from "@/lib/live-data";
+import { COURSES_CATALOG } from "@/lib/intelligenceData";
 
-export const revalidate = DATA_TTL_SECONDS;
+export const revalidate = 60;
 
 export async function GET() {
-  const data = await getLiveDataset();
   return NextResponse.json({
-    courses: data.courses,
-    total: data.courses.length,
-    source: data.source,
-    generated_at: data.generated_at,
+    courses: COURSES_CATALOG,
+    total: COURSES_CATALOG.length
   });
 }

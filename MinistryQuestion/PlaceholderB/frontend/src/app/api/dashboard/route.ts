@@ -1,17 +1,31 @@
 import { NextResponse } from "next/server";
-import { getLiveDataset, DATA_TTL_SECONDS } from "@/lib/live-data";
+import {
+  SKILL_INTELLIGENCE_DATA,
+  COURSES_CATALOG,
+  EMPLOYER_PARTNERS_DATA,
+  DISTRICT_INTELLIGENCE_DATA,
+  EARLY_WARNING_ALERTS,
+  POLICY_DECISIONS_DATA,
+  CAREER_PATHWAYS_DATA
+} from "@/lib/intelligenceData";
 
-export const revalidate = DATA_TTL_SECONDS;
+export const revalidate = 60;
 
 export async function GET() {
-  const data = await getLiveDataset();
   return NextResponse.json({
-    stats: data.stats,
-    top_skill_gaps: data.skill_gaps.slice(0, 6),
-    recent_courses: data.courses.slice(0, 6),
-    district_training: data.districts.slice(0, 6),
-    top_employers: data.employers.slice(0, 5),
-    source: data.source,
-    generated_at: data.generated_at,
+    status: "online",
+    courses_tracked: 1247,
+    skill_gaps_identified: 389,
+    critical_deficits_count: SKILL_INTELLIGENCE_DATA.filter((s) => s.priority === "CRITICAL").length,
+    placement_rate: "67.4%",
+    projected_modernized_placement_rate: "79.0%",
+    total_openings: SKILL_INTELLIGENCE_DATA.reduce((acc, s) => acc + s.openings, 0),
+    employer_partners: EMPLOYER_PARTNERS_DATA.length,
+    skills: SKILL_INTELLIGENCE_DATA,
+    courses: COURSES_CATALOG,
+    districts: DISTRICT_INTELLIGENCE_DATA,
+    alerts: EARLY_WARNING_ALERTS,
+    policy_actions: POLICY_DECISIONS_DATA,
+    pathways: CAREER_PATHWAYS_DATA
   });
 }
