@@ -26,15 +26,21 @@ export default function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-[#090d16]/95 backdrop-blur-md border-b border-slate-800/80">
-        {/* Top Ministry Banner */}
+        {/* Top Status Banner */}
         <div className="bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 border-b border-blue-900/40 text-[11px] px-4 sm:px-6 py-1 text-slate-300 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-semibold text-slate-200">
-              State Skill & Vocational Training Directorate
+            <span className="font-bold text-white">
+              SkillBridge AI
             </span>
-            <span className="hidden md:inline text-slate-500">|</span>
-            <span className="hidden md:inline text-blue-300 font-mono">Labour-Market Demand Intelligence Suite</span>
+            <span className="hidden md:inline text-slate-500">•</span>
+            <span className="hidden md:inline text-blue-300 font-medium">
+              Labour-Market Intelligence &amp; Curriculum Alignment Platform
+            </span>
+            <span className="hidden lg:inline text-slate-500">•</span>
+            <span className="hidden lg:inline text-xs font-mono font-bold px-2 py-0.2 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">
+              SIH 2026 Prototype
+            </span>
           </div>
           <div className="flex items-center gap-3 text-xs">
             <button

@@ -21,7 +21,7 @@ export default function PolicyDecisionsPage() {
         if (a.id === actionId) {
           const newStatus = !a.approved;
           if (newStatus) {
-            setSuccessToast(`✓ Policy Action "${a.title}" officially authorized by Directorate!`);
+            setSuccessToast(`✓ Policy Action "${a.title}" authorized in Decision Support Suite!`);
             setTimeout(() => setSuccessToast(null), 3500);
           }
           return { ...a, approved: newStatus };
@@ -34,7 +34,7 @@ export default function PolicyDecisionsPage() {
   const handleViewEvidence = (action: GovernmentPolicyAction) => {
     setActiveReasoningData({
       evidence: action.evidenceSummary,
-      skillRequirement: "Cross-checked with 48 enterprise employers and regional job vacancies.",
+      skillRequirement: "Cross-checked with enterprise employers and regional job vacancies.",
       currentCourse: action.affectedCourseOrSector,
       detectedGap: action.description,
       recommendation: action.title,
@@ -59,6 +59,13 @@ export default function PolicyDecisionsPage() {
     "Employer Validation"
   ];
 
+  const workflowStages = [
+    { step: "01", title: "AI Recommendation", desc: "Automated deficit & gap analysis", icon: "🤖", active: true },
+    { step: "02", title: "Employer Validation", desc: "Industry review & competency consensus", icon: "🏢", active: true },
+    { step: "03", title: "Administrator Approval", desc: "Human-in-the-loop policy sign-off", icon: "🏛️", active: true },
+    { step: "04", title: "Implementation", desc: "Seat quotas, syllabus & lab deployment", icon: "⚡", active: false },
+  ];
+
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Header */}
@@ -66,18 +73,18 @@ export default function PolicyDecisionsPage() {
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">
-              STATE GOVERNANCE COCKPIT
+              DECISION-SUPPORT &amp; GOVERNANCE COCKPIT
             </span>
             <span className="text-xs text-slate-500">•</span>
             <span className="text-xs text-emerald-400 font-mono">
-              Evidence-Based Policy Authorizations
+              Human-in-the-Loop Policy Approvals
             </span>
           </div>
           <h1 className="text-3xl font-black text-white mt-1">
             Policy Decision Center
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
-            Executive control panel for state vocational training directors to authorize curriculum revisions, seat quotas, and trainer upskilling grants.
+            Executive control panel for educational planners and training administrators to review evidence, authorize curriculum revisions, and approve capacity quotas.
           </p>
         </div>
 
@@ -88,6 +95,38 @@ export default function PolicyDecisionsPage() {
           <span className="badge-update px-3 py-1 rounded-full text-xs font-bold">
             {pendingCount} Pending Review
           </span>
+        </div>
+      </div>
+
+      {/* Human Validation Workflow (Priority #16) */}
+      <div className="glass-card p-5 border-blue-500/30">
+        <div className="flex items-center justify-between mb-3 border-b border-slate-800 pb-2">
+          <span className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+            Human-in-the-Loop Governance &amp; Authorization Pipeline
+          </span>
+          <span className="text-[10px] font-mono text-emerald-400">
+            Decision-Support System
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {workflowStages.map((wf) => (
+            <div
+              key={wf.step}
+              className={`p-3 rounded-xl border text-xs ${
+                wf.step === "03"
+                  ? "bg-blue-950/50 border-blue-500/50 ring-1 ring-blue-400"
+                  : "bg-slate-950/80 border-slate-800"
+              }`}
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-[10px] font-mono text-blue-400 font-bold">Step {wf.step}</span>
+                <span className="text-base">{wf.icon}</span>
+              </div>
+              <p className="font-bold text-white text-xs">{wf.title}</p>
+              <p className="text-[11px] text-slate-400 mt-0.5">{wf.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
 

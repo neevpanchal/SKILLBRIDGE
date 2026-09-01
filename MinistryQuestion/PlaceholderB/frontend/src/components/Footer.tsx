@@ -112,8 +112,8 @@ export default function Footer() {
                 Transparency & Governance
               </h4>
               <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-3.5 space-y-2">
-                <p className="text-white font-semibold text-xs">State Vocational Training Directorate</p>
-                <p className="text-[11px] text-blue-400 font-mono">Labour-Market Analytics Cell</p>
+                <p className="text-white font-semibold text-xs">SkillBridge Decision Support Cell</p>
+                <p className="text-[11px] text-blue-400 font-mono">SIH 2026 Prototype Engine</p>
                 <button
                   type="button"
                   onClick={() => setIsSourcesModalOpen(true)}
