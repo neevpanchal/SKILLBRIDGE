@@ -42,7 +42,7 @@ export default function EmployersPage() {
   useEffect(() => {
     async function fetchEmployers() {
       try {
-        const res = await fetch("http://localhost:8000/api/employers");
+        const res = await fetch("/api/employers");
         if (res.ok) {
           const data = await res.json();
           if (data.employers && data.employers.length > 0) {

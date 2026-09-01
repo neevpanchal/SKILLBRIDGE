@@ -37,7 +37,7 @@ export default function SkillGapsPage() {
   useEffect(() => {
     async function fetchGaps() {
       try {
-        const res = await fetch("http://localhost:8000/api/skill-gaps");
+        const res = await fetch("/api/skill-gaps");
         if (res.ok) {
           const data = await res.json();
           if (data.skill_gaps && data.skill_gaps.length > 0) {

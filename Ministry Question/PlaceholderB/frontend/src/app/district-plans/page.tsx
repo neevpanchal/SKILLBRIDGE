@@ -32,7 +32,7 @@ export default function DistrictPlansPage() {
   useEffect(() => {
     async function fetchDistricts() {
       try {
-        const res = await fetch("http://localhost:8000/api/districts");
+        const res = await fetch("/api/districts");
         if (res.ok) {
           const data = await res.json();
           if (data.districts && data.districts.length > 0) {

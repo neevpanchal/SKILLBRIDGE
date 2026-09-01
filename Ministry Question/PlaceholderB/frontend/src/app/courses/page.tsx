@@ -40,7 +40,7 @@ export default function CoursesPage() {
   useEffect(() => {
     async function fetchCourses() {
       try {
-        const res = await fetch("http://localhost:8000/api/courses");
+        const res = await fetch("/api/courses");
         if (res.ok) {
           const data = await res.json();
           if (data.courses && data.courses.length > 0) {
